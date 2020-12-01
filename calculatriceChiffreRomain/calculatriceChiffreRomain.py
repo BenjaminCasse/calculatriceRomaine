@@ -19,10 +19,10 @@ def base10ToChiffreRomain(chiffreRomain):
     chiffresBase10 = (1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1)
     chiffresRomain = ('M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I')
     resultat = []
-    for i in range(len(chiffresBase10)):
-        occurence = int(chiffreRomain / chiffresBase10[i])
-        resultat.append(chiffresRomain[i] * occurence)
-        chiffreRomain -= chiffresBase10[i] * occurence
+    for indiceChiffreRomain in range(len(chiffresBase10)):
+        occurence = int(chiffreRomain / chiffresBase10[indiceChiffreRomain])
+        resultat.append(chiffresRomain[indiceChiffreRomain] * occurence)
+        chiffreRomain -= chiffresBase10[indiceChiffreRomain] * occurence
     return ''.join(resultat)
 
 
